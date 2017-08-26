@@ -1,5 +1,4 @@
 # syncthing docker
-not ready for production
 
 A quick docker for of https://syncthing.net/
 
