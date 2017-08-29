@@ -12,6 +12,6 @@ A quick docker for of https://syncthing.net/
  - 8384/tcp => WebUI, keep this access private
  - 22000/tcp => protocole
 
-3-Create "shares" in "/home/syncthing/Sync" (from the docker point of view), ie: /home/syncthing/Sync/photos)
+3-Create "shares" in "/home/syncthing/Sync" (from the docker point of view), ie: /home/syncthing/Sync/photos
 
 =>documentation: https://docs.syncthing.net/intro/getting-started.html
