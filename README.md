@@ -1,6 +1,6 @@
 # syncthing docker
 
-A quick docker for of https://syncthing.net/
+A quick docker of https://syncthing.net/
 
 1-Create folders for volumes:
 
