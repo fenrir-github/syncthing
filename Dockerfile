@@ -1,12 +1,12 @@
 # fenrir/syncthing
 # syncthing
 #
-# VERSION 0.1.2
+# VERSION 0.1.3
 #
 FROM debian:stretch-slim
 MAINTAINER Fenrir <dont@want.spam>
 
-ENV	DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 ENV VERSION stable
 
 # Configure APT and install packages
