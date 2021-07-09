@@ -27,8 +27,12 @@ RUN	echo 'APT::Install-Suggests "false";' > /etc/apt/apt.conf &&\
 RUN	useradd syncthing --home /home/syncthing --create-home --shell /sbin/nologin &&\
 	#Add repo key
 	curl -s https://syncthing.net/release-key.txt | apt-key add - &&\
+	curl -s -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg &&\
 	# Add repo
-	echo "deb https://apt.syncthing.net/ syncthing $VERSION" | tee /etc/apt/sources.list.d/syncthing.list &&\
+	# echo "deb https://apt.syncthing.net/ syncthing $VERSION" | tee /etc/apt/sources.list.d/syncthing.list &&\
+	echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list &&\
+	# Increase preference of Syncthing's packages ("pinning")
+	printf "Package: *\nPin: origin apt.syncthing.net\nPin-Priority: 990\n" | sudo tee /etc/apt/preferences.d/syncthing &&\
 	# Install packages
 	apt-get update && apt-get -y install syncthing
 
