@@ -1,7 +1,7 @@
 # fenrir/syncthing
 # syncthing
 #
-# VERSION 0.1.3
+# VERSION 0.1.4
 #
 FROM debian:stretch-slim
 MAINTAINER Fenrir <dont@want.spam>
