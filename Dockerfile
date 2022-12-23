@@ -1,9 +1,9 @@
 # fenrir/syncthing
 # syncthing
 #
-# VERSION 0.1.5
+# VERSION 11.6.0
 #
-FROM debian:stretch-slim
+FROM debian:bullseye-slim
 MAINTAINER Fenrir <dont@want.spam>
 
 ENV DEBIAN_FRONTEND noninteractive
