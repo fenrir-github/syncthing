@@ -5,8 +5,8 @@ A quick docker of https://syncthing.net/
 1-Create folder for data persistence:
 
  - syncthing folder: `/path/to/syncthing/`
- - configuration will be in `/path/to/syncthing/.local`
- - data will be in `/path/to/syncthing/`
+Configuration will be in `/path/to/syncthing/.local`
+Data will be in `/path/to/syncthing/`
 
 2-Start container: `docker run --name syncthing -d --restart always -p 8384:8384 -p 22000:22000 -v /path/to/syncthing:/syncthing fenrir/syncthing`
 
