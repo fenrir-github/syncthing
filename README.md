@@ -2,16 +2,17 @@
 
 A quick docker of https://syncthing.net/
 
-1-Create folders for volumes:
+1-Create folder for persistant data:
 
- - syncthing configuration folder: `/path/to/syncthing/config`
- - syncthing data folder: `/path/to/syncthing/data`
+ - syncthing folder: `/path/to/syncthing/`
+ - configuration will be in `/path/to/syncthing/.local`
+ - data will be in `/path/to/syncthing/`
 
-2-Start container: `docker run --name syncthing -d --restart always -p 8384:8384 -p 22000:22000 -v /path/to/syncthing/config:/home/syncthing/config -v /path/to/syncthing/data:/home/syncthing/Sync fenrir/syncthing`
+2-Start container: `docker run --name syncthing -d --restart always -p 8384:8384 -p 22000:22000 -v /path/to/syncthing:/syncthing fenrir/syncthing`
 
- - 8384/tcp => WebUI, keep this access private
+ - 8384/tcp => WebUI, keep this access private and add a good password
  - 22000/tcp => protocole
 
-3-Create "shares" in "/home/syncthing/Sync" (from the docker point of view), ie: /home/syncthing/Sync/photos
+3-Create "shares" in "~/" (from the docker point of view it's /syncthing/), ie: ~/photos
 
 =>documentation: https://docs.syncthing.net/intro/getting-started.html
