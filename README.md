@@ -2,7 +2,7 @@
 
 A quick docker of https://syncthing.net/
 
-1-Create folder for persistant data:
+1-Create folder for data persistence:
 
  - syncthing folder: `/path/to/syncthing/`
  - configuration will be in `/path/to/syncthing/.local`
